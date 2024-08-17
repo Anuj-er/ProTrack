@@ -452,3 +452,13 @@ footer p {
   border-radius: var(--border-radius-2);
   box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
 }
+
+/* Preloader */
+#preloader {
+  background: #fff url("../images/preloader.gif") no-repeat center center;
+  background-size: 15%;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+}
