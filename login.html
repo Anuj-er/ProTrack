@@ -9,7 +9,7 @@
     />
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="contents/css/login.css" />
-    <link rel="icon" type="image/x-icon" href="contents/images/favicon_1.png" />
+    <link rel="icon" type="image/x-icon" href="contents/images/favicon.png" />
     <title>ProTrack | Learning Management System</title>
   </head>
   <body>
@@ -17,7 +17,7 @@
       <div class="forms-container">
         
         <div class="signin-signup">
-          <form action="#" class="sign-in-form">
+          <form action="#" class="sign-in-form"  onsubmit="openDashboard(event)">
             <h1 id="site-name" class="fs-2 m-0">ProTrack LMS</h1>
             <h2 class="title">Sign in</h2>
             <div class="input-field">
@@ -45,7 +45,7 @@
               </a>
             </div>
           </form>
-          <form action="#" class="sign-up-form">
+          <form action="#" class="sign-up-form" >
             <h1 id="site-name" class="fs-2 m-0">ProTrack LMS</h1>
             <h2 class="title">Sign up</h2>
             <div class="input-field">
@@ -60,7 +60,7 @@
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="Password" />
             </div>
-            <input type="submit" class="btn" value="Sign up" />
+            <input type="submit" class="btn" value="Sign up"  />
             <p class="social-text">Or Sign up with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -107,7 +107,12 @@
         </div>
       </div>
     </div>
-
+    <script>
+      function openDashboard(event) {
+          event.preventDefault(); // Prevent the form from submitting
+          window.location.href = 'dashboard.html'; // Redirect to dashboard.html
+      }
+  </script>
     <script src="contents/js/login.js"></script>
   </body>
 </html>
