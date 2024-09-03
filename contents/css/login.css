@@ -12,8 +12,8 @@
   --white-shade-2: #d7e1f3;
   --black-shade-1: #424040;
   --black-shade-2: #676a8b;
-  --grad-color-1: 127, 95, 207; /* Darker shade similar to #8a70d6 */
-  --grad-color-2: 212, 201, 255; /* Darker shade similar to #e9e3ff */
+  --grad-color-1: 127, 95, 207; 
+  --grad-color-2: 212, 201, 255;
 
   --base-font-size: 1.6rem;
 
@@ -32,7 +32,7 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100vh;
-  overflow: hidden; /* Prevents scrolling */
+  overflow: hidden;
 }
 
 input {
@@ -68,6 +68,52 @@ input {
   display: grid;
   grid-template-columns: 1fr;
   z-index: 5;
+}
+
+/* Gender Selection */
+.gender-selection {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background-color: #F5F5F5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.gender-selection input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--white-shade-1);
+  border: 3px solid #FFF;
+  box-shadow: 0 0 0 1px var(--black-shade-2);
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.gender-selection input:checked {
+  background: var(--base-shade-1);
+  border: 3px solid var(--base-shade-1);
+  box-shadow: 0 0 0 3px var(--white);
+}
+
+.gender-selection input:checked::after {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 form {

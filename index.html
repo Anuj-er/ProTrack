@@ -42,6 +42,7 @@
     <!------ Queries ------>
     <link rel="stylesheet" href="contents/css/queries.css" />
   </head>
+
   <!------ Header ------>
   <header>
     <nav>
@@ -52,15 +53,16 @@
       <i class="fas fa-bars" id="ham-menu"></i>
 
       <ul id="nav-bar">
-        <li>
+        <li id="user-nav-item">
           <button class="register-btn">Register</button>
-        </li>
+      </li>
       </ul>
     </nav>
   </header>
 
   <!------ Body ------>
   <body>
+
     <!-- Preloader -->
     <div id="preloader" class="preloader"></div>
 
@@ -285,7 +287,47 @@
     </section>
 
     <!------ Script ------>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <script src="contents/js/script.js"></script>
+
+    <!-- Script For opening Dashboard -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          // Check if a user is signed in
+          const signedInUser = localStorage.getItem('signedInUser');
+          const userNavItem = document.getElementById('user-nav-item');
+          const btnContainer = document.querySelector('.btn-container');
+
+          if (signedInUser) {
+              // Replace the "Register" button with the username and logout button
+              if (userNavItem) {
+                  userNavItem.innerHTML = `
+                      <span>Welcome, ${signedInUser}!</span>
+                      <button class="logout-btn" onclick="logout()">Logout</button>
+                  `;
+              }
+              
+              // Replace the buttons with "Open Dashboard"
+              if (btnContainer) {
+                  btnContainer.innerHTML = `<button class="primary-btn btn" onclick="openDashboard()">Open Dashboard</button>`;
+              }
+          }
+      });
+
+      function openDashboard() {
+          // Redirect to the dashboard page
+          window.location.href = 'dashboard.html';
+      }
+
+      function logout() {
+          // Remove the signed-in user from localStorage
+          localStorage.removeItem('signedInUser');
+
+          // Redirect to the sign-in page
+          window.location.href = 'login.html';
+      }
+  </script>
   </body>
 
   <!------ Footer ------>

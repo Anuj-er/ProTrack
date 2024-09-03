@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const loginButton = document.querySelector(".primary-btn.btn");
 
   loginButton.addEventListener("click", () => {
-    window.location.href = "login.html"; // Replace 'login.html' with your target page URL
+    window.location.href = "login.html";
   });
 });
 

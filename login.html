@@ -16,16 +16,17 @@
       <div class="forms-container">
         
         <div class="signin-signup">
-          <form action="#" class="sign-in-form"  onsubmit="openDashboard(event)">
+          <!-- Sign In Form -->
+          <form action="#" class="sign-in-form" onsubmit="handleSignIn(event)">
             <h1 id="site-name" class="fs-2 m-0">ProTrack LMS</h1>
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" id="signin-username" placeholder="Username" required />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" id="signin-password" placeholder="Password" required />
             </div>
             <input type="submit" value="Login" class="btn solid" />
             <p class="social-text">Or Sign in with social platforms</p>
@@ -44,22 +45,34 @@
               </a>
             </div>
           </form>
-          <form action="#" class="sign-up-form" >
+        
+          <!-- Sign Up Form -->
+          <form action="#" class="sign-up-form" onsubmit="handleSignUp(event)">
             <h1 id="site-name" class="fs-2 m-0">ProTrack LMS</h1>
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" id="signup-username" placeholder="Username" required />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              <input type="email" id="signup-email" placeholder="Email" required />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" id="signup-password" placeholder="Password" required />
             </div>
-            <input type="submit" class="btn" value="Sign up"  />
+            <div class="gender-selection">
+              <label>
+                  <input type="radio" name="gender" value="male" required />
+                  Male
+              </label>
+              <label>
+                  <input type="radio" name="gender" value="female" required />
+                  Female
+              </label>
+          </div>
+            <input type="submit" class="btn" value="Sign up" />
             <p class="social-text">Or Sign up with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -77,7 +90,6 @@
             </div>
           </form>
         </div>
-      </div>
 
       <div class="panels-container">
         <div class="panel left-panel">
@@ -106,12 +118,15 @@
         </div>
       </div>
     </div>
+
+    <!-- Script for Opening Dashboard -->
     <script>
       function openDashboard(event) {
           event.preventDefault(); // Prevent the form from submitting
           window.location.href = 'dashboard.html'; // Redirect to dashboard.html
       }
   </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="contents/js/login.js"></script>
   </body>
 </html>

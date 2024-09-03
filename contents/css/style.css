@@ -5,8 +5,8 @@
   --white-shade-2: #d7e1f3;
   --black-shade-1: #424040;
   --black-shade-2: #676a8b;
-  --grad-color-1: 127, 95, 207; /* Darker shade similar to #8a70d6 */
-  --grad-color-2: 212, 201, 255; /* Darker shade similar to #e9e3ff */
+  --grad-color-1: 127, 95, 207;
+  --grad-color-2: 212, 201, 255; 
 
   --base-font-size: 1.6rem;
 
@@ -107,7 +107,7 @@ header {
   padding: 1.5rem 5rem;
 }
 .register-btn {
-  background-color: Var(--base-shade-1); /* Green */
+  background-color: Var(--base-shade-1);
   border: none;
   color: var(--white-shade-1);
   padding: 10px 20px;
@@ -118,6 +118,21 @@ header {
   border-radius: 10px;
 }
 .register-btn:hover {
+  background-color: var(--black-shade-2);
+}
+
+.logout-btn {
+  background-color: var(--base-shade-1); 
+  border: none;
+  color: var(--white-shade-1);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  border-radius: 10px;
+}
+.logout-btn:hover {
   background-color: var(--black-shade-2);
 }
 
@@ -406,7 +421,7 @@ section.hero {
 	border: 1px solid gray;
 	border-radius: 8px;
 	cursor: pointer;
-	font-size: 10px; /* Increased further */
+	font-size: 10px;
 }
 
 .section1__button_container button:nth-child(2) {
@@ -417,7 +432,7 @@ section.hero {
   border: 1px solid gray;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 10px; /* Increased further */
+  font-size: 10px;
 }
 
 .navigation_container {
@@ -436,7 +451,7 @@ section.hero {
 }
 
 .link_container h5 {
-	font-size: 20px; /* Increased further */
+	font-size: 20px; 
 	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -451,7 +466,7 @@ section.hero {
 	gap: 5px;
 	font-weight: 400;
 	margin-bottom: 4px;
-	font-size: 14px; /* Increased further */
+	font-size: 14px;
 }
 
 .link_container_anchors a:hover {
@@ -504,14 +519,13 @@ section.hero {
 	padding-top: 20px;
 }
 /* Media queries for footer section */
-/* Media query for screens 900px or smaller */
 @media only screen and (max-width: 900px) {
   .section1__button_container button,
   .section1__button_container select,
   .link_container h5,
   .link_container_anchors a,
   .disclaimer {
-    font-size: 12px; /* Decreased font size for medium screens */
+    font-size: 12px; 
   }
 }
 
@@ -522,7 +536,7 @@ section.hero {
   .link_container h5,
   .link_container_anchors a,
   .disclaimer {
-    font-size: 10px; /* Further decreased font size for small screens */
+    font-size: 10px;
   }
 }
 
@@ -533,7 +547,7 @@ section.hero {
   .link_container h5,
   .link_container_anchors a,
   .disclaimer {
-    font-size: 8px; /* Further decreased font size for extra small screens */
+    font-size: 8px;
   }
 }
 
@@ -566,3 +580,10 @@ section.hero {
   width: 100%;
   z-index: 100;
 }
+
+ #user-nav-item span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  padding: 10px;
+} 
