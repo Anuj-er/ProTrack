@@ -530,3 +530,116 @@ form.sign-in-form {
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 375px) {
+  form {
+    padding: 0 1.5rem;
+  }
+
+  .image {
+    display: none;
+  }
+  
+  .panel .content {
+    padding: 0.5rem 1rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+
+  .container:before {
+    bottom: 72%;
+    left: 50%;
+  }
+
+  .container.sign-up-mode:before {
+    bottom: 28%;
+    left: 50%;
+  }
+
+  .panel {
+    padding: 1.5rem;
+  }
+
+  .panel h3 {
+    font-size: 1.2rem;
+  }
+
+  .panel p {
+    font-size: 0.8rem;
+  }
+
+  .btn.transparent {
+    width: 100px;
+    height: 35px;
+    font-size: 0.7rem;
+  }
+
+  .btn {
+    width: 130px;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+
+  .social-media {
+    display: none;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .social-icon {
+    height: 40px;
+    width: 40px;
+    margin: 0 0.3rem;
+  }
+
+  .input-field {
+    height: 50px;
+    border-radius: 50px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  .input-field i {
+    font-size: 1rem;
+  }
+
+  .input-field input {
+    font-size: 1rem;
+  }
+
+  .social-text {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    width: 130px;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .panel .content {
+    padding-right: 10%;
+  }
+
+  .panel p {
+    font-size: 0.75rem;
+    padding: 0.4rem 0;
+  }
+
+  .btn.transparent {
+    width: 100px;
+    height: 35px;
+    font-size: 0.7rem;
+  }
+
+  .btn {
+    width: 130px;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+}
