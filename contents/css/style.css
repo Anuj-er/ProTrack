@@ -1,6 +1,6 @@
 /*------ Variables ------*/
 :root {
-  --base-shade-1: #8a70D6;
+  --base-shade-1: #8a70d6;
   --white-shade-1: #fbfbfb;
   --white-shade-2: #d7e1f3;
   --black-shade-1: #424040;
@@ -17,7 +17,30 @@
 
   --border-radius-1: 1rem;
   --border-radius-2: 0.5rem;
+  
+  /* Light Mode Variables */
+  --background-color: #fbfbfb;
+  --text-color: #424040;
+  --card-background: #ffffff;
+  --card-border: #e0e0e0;
 }
+
+/* Dark Mode Variables */
+.dark-mode {
+  --base-shade-1: #8a70d6;
+  --white-shade-1: #1f1f1f;
+  --white-shade-2: #2c2c2c;
+  --black-shade-1: #d3d3d3;
+  --black-shade-2: #a5a5a5;
+  --grad-color-1: 100, 80, 180;
+  --grad-color-2: 170, 160, 255; 
+
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --card-background: #1f1f1f;
+  --card-border: #333333;
+}
+
 /*------ Base Styles ------*/
 *,
 *:before,
@@ -26,12 +49,20 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 *:not(i) {
   font-family: "Poppins", sans-serif;
 }
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+}
+
+/* Use the dark-mode class for dark mode */
+.dark-mode {
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 /*------ Utility Classes ------*/
 
@@ -569,6 +600,27 @@ section.hero {
   font-size: var(--heading-font-size-3);
   border-radius: var(--border-radius-2);
   box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+#scroll-top:hover {
+  background-color: var(--black-shade-2);
+}
+#darkmode-toggle{
+  position: fixed;
+  height: 5rem;
+  width: 5rem;
+  right: 3rem;
+  bottom: 10rem;
+  background-color: var(--base-shade-1);
+  color: var(--white-shade-1);
+  border: none;
+  outline: none;
+  font-size: var(--heading-font-size-3);
+  border-radius: var(--border-radius-2);
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
+}
+#darkmode-toggle:hover {
+  background-color: var(--black-shade-2);
 }
 
 /* Preloader */
