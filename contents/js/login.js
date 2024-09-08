@@ -10,16 +10,16 @@ sign_in_btn.addEventListener("click", () => {
   container.classList.remove("sign-up-mode");
 });
 
-$("#search-icon").click(function() {
-  $(".nav").toggleClass("search");
-  $(".nav").toggleClass("no-search");
-  $(".search-input").toggleClass("search-active");
-});
+// $("#search-icon").click(function() {
+//   $(".nav").toggleClass("search");
+//   $(".nav").toggleClass("no-search");
+//   $(".search-input").toggleClass("search-active");
+// });
 
-$('.menu-toggle').click(function() {
-  $(".nav").toggleClass("mobile-nav");
-  $(this).toggleClass("is-active");
-});
+// $('.menu-toggle').click(function() {
+//   $(".nav").toggleClass("mobile-nav");
+//   $(this).toggleClass("is-active");
+// });
 
 function getStoredUsers() {
   const users = localStorage.getItem('users');
@@ -31,7 +31,7 @@ function saveUsers(users) {
   localStorage.setItem('users', JSON.stringify(users));
 }
 
-// Function to get selected gender
+// Function to get selected gender`
 function getSelectedGender(formId) {
   const genderRadios = document.querySelectorAll(`#${formId} input[name="gender"]`);
   for (let radio of genderRadios) {
