@@ -3,16 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>To do List | Dashboard | ProTrack</title>
+    <title>Goal Setting | ProTrack</title>
     <link rel="icon" type="image/x-icon" href="./contents/images/favicon.png" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./contents/css/dashboard.css">
-    <link rel="stylesheet" type="text/css" href="./contents/css/todo.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="contents/css/goalSetting.css">
 </head>
 
 <body>
@@ -36,7 +39,7 @@
                     <span class="material-icons-sharp">calendar_today</span>
                     <h3>Activity Tracking</h3>
                 </a> -->
-                <a href="./goalSetting.html">
+                <a href="./goalSetting.html" class="active">
                     <span class="material-icons-sharp">flag</span>
                     <h3>Goal Setting</h3>
                 </a>
@@ -44,7 +47,7 @@
                     <span class="material-icons-sharp">insights</span>
                     <h3>Analytics</h3>
                 </a>
-                <a href="./todo.html" class="active">
+                <a href="./todo.html">
                     <span class="material-icons-sharp">checklist</span>
                     <h3>Todo</h3>
                 </a>
@@ -63,7 +66,6 @@
             </div>
         </aside>
 
-        <!-- To Do List Section -->
         <main>
             <form class="add-product-popUp">
                 <h1>Add Activity</h1><br>
@@ -77,61 +79,67 @@
                 </label>
                 <button type="submit" class="popupSubmit">Add</button>
             </form>
-            <h1>To Do List</h1>
-        
-            <div class="app">
-                <div class="todo-container">
-                    <!-- Category Selection Section -->
-                    <section class="create-todo">
-                        <h3>Set Your Academic Goals</h3>
-                        <form id="new-todo-form">
-                            <input type="text" name="goal" id="content" placeholder="Write your goal here" />
-        
-                            <h4>Pick a category</h4>
-                            <div class="options">
-                                <label>
-                                    <input type="radio" name="category" id="category1" value="study" />
-                                    <span class="bubble business"></span>
-                                    <div>Self-Study</div>
-                                </label>
-        
-                                <label>
-                                    <input type="radio" name="category" id="category2" value="College Lectures" />
-                                    <span class="bubble personal"></span>
-                                    <div>College Lectures</div>
-                                </label>
-        
-                                <label>
-                                    <input type="radio" name="category" id="category3" value="Extra-Curricular" />
-                                    <span class="bubble extra-curricular"></span>
-                                    <div>Extra-Curricular</div>
-                                </label>
-        
-                                <label>
-                                    <input type="radio" name="category" id="category4" value="self-improvement" />
-                                    <span class="bubble improvement"></span>
-                                    <div>Self-Improvement</div>
-                                </label>
+            <h1>Goal Setting</h1>
+            <div class="calendar-container">
+                <div class="calendar-left">
+                    <div class="calendar">
+                        <div class="month">
+                            <i class="fas fa-angle-left prev"></i>
+                            <div class="date">december 2015</div>
+                            <i class="fas fa-angle-right next"></i>
+                        </div>
+                        <div class="weekdays">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="days"></div>
+                        <div class="goto-today">
+                            <div class="goto">
+                                <input type="text" placeholder="mm/yyyy" class="date-input" />
+                                <button class="goto-btn">Go</button>
                             </div>
-                            <div class="deadline">
-                                <label for="deadline" class="deadline">Set a deadline:</label>
-                                <input type="date" id="deadline" name="deadline" />
-                            </div><br>
-                            <input type="submit" value="Add Goal" />
-                        </form>
-                    </section>
-        
-                    <!-- To Do List Section -->
-                    <section class="todo-list">
-                        <h3>Todo List</h3>
-                        <div class="list" id="todo-list"></div>
-                    </section>
+                            <button class="today-btn">Today</button>
+                        </div>
+                    </div>
                 </div>
+                <div class="calendar-right">
+                    <div class="today-date">
+                        <div class="event-day">wed</div>
+                        <div class="event-date">12th december 2022</div>
+                    </div>
+                    <div class="events"></div>
+                    <div class="add-event-wrapper">
+                        <div class="add-event-header">
+                            <div class="title">Add Event</div>
+                            <i class="fas fa-times close"></i>
+                        </div>
+                        <div class="add-event-body">
+                            <div class="add-event-input">
+                                <input type="text" placeholder="Event Name" class="event-name" />
+                            </div>
+                            <div class="add-event-input">
+                                <input type="text" placeholder="Event Time From" class="event-time-from" />
+                            </div>
+                            <div class="add-event-input">
+                                <input type="text" placeholder="Event Time To" class="event-time-to" />
+                            </div>
+                        </div>
+                        <div class="add-event-footer">
+                            <button class="add-event-btn">Add Event</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="add-event">
+                    <i class="fas fa-plus"></i>
+                </button>
             </div>
         </main>
 
-
-        <!-- Top RIght Section Menu -->
         <div class="right">
             <div class="top">
                 <button id="menu-btn">
@@ -143,16 +151,13 @@
                 </div>
                 <div class="profile">
                     <div class="info">
-                        <!-- Placeholder for the user's name -->
                         <p>Hey, <b id="username-placeholder">USER</b></p>
                         <small class="text-muted">Admin</small>
                     </div>
                     <div class="profile-photo">
-                        <!-- Placeholder for the user's profile image -->
                         <img src="./contents/images/user.png" alt="profile" id="profile-photo-placeholder">
                     </div>
                 </div>
-            
             </div>
 
             <div class="recent-updates">
@@ -160,7 +165,6 @@
                 <div class="updates">
                     <div class="update">
                         <div class="profile-photo">
-                            <!-- Placeholder for the user's profile image -->
                             <img src="./contents/images/user.png" alt="profile" id="profile-photo-placeholder">
                         </div>
                         <div class="message">
@@ -170,7 +174,6 @@
                     </div>
                     <div class="update">
                         <div class="profile-photo">
-                            <!-- Placeholder for the user's profile image -->
                             <img src="./contents/images/user.png" alt="profile" id="profile-photo-placeholder">
                         </div>
                         <div class="message">
@@ -222,10 +225,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-
-            <script src="./contents/js/dashboard.js"></script>
-            <script src="./contents/js/todo.js"></script>
+    <script src="./contents/js/dashboard.js"></script>
+    <script src="./contents/js/goalSetting.js"></script>
 </body>
 
 </html>

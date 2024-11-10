@@ -224,7 +224,7 @@ aside .sidebar a span.message-count {
 
 /* === main === */
  /* *****************************************************************************************************  */
-main {
+ main {
     margin-top: 1.4rem;
 }
 
@@ -248,7 +248,7 @@ section {
     padding-right: 1.5rem;
 }
 
-h3 {
+/* h3 {
     color: var(--color-dark);
     font-size: 1rem;
     font-weight: 400;
@@ -260,7 +260,7 @@ h4 {
     font-size: 0.875rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-}
+} */
 
 .greeting .title {
     display: flex;
@@ -281,7 +281,7 @@ h4 {
 
 .todo-container {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     flex-grow: 1;
 }
 
@@ -397,7 +397,6 @@ input[type="checkbox"] {
     box-shadow: 0px 0px 4px #03a9f4;
 }
 
-
 input:checked ~ .bubble::after {
     width: 10px;
     height: 10px;
@@ -432,7 +431,7 @@ input:checked ~ .bubble::after {
     margin: 1rem 0;
 }
 
-.todo-list .todo-item {
+.todo-item {
     display: flex;
     align-items: center;
     background-color: var(--color-white);
@@ -489,6 +488,32 @@ input:checked ~ .bubble::after {
     color: var(--color-dark-variant);
 }
 
+/* Improved deadline styling */
+.todo-item .deadline {
+    font-size: 0.875rem;
+    color: var(--color-dark-variant);
+    margin-right: 1rem;
+    padding: 0.25rem 0.6rem;
+    background-color: #ede8fe;
+    border-radius: var(--border-radius-1);
+}
+
+/* Improved edit and delete icon styling */
+.todo-item .actions button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    padding: 0.25rem;
+    border-radius: 50%;
+    font-size: 1.25rem;
+}
+
+.todo-item .actions button:hover {
+    transform: scale(1.1);
+}
+
 @media (max-width: 768px) {
     .todo-item {
        flex-direction: column;
@@ -501,8 +526,19 @@ input:checked ~ .bubble::after {
     .todo-item .todo-content input {
        padding: 10px;
     }
+    
+    .todo-item .deadline {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .todo-item .actions {
+        margin-top: 0.5rem;
+        align-self: flex-end;
+    }
 }
 
+/* === right === */
 /* === right === */
 .right {
     margin-top: 1.4rem;
@@ -585,6 +621,16 @@ input:checked ~ .bubble::after {
 .right .activity-analysis {
     margin-top: 2rem;
 }
+.right .activity-cont {
+    overflow-y: auto;  /**/
+    height: 26vh;
+    margin-bottom: 2rem;
+
+}
+.right .activity-cont::-webkit-scrollbar{
+    display: none; /**/
+}
+
 
 .right .activity-analysis h2 {
     margin-bottom: 0.8rem;
@@ -643,14 +689,59 @@ input:checked ~ .bubble::after {
     align-items: center;
 }
 
-.right .activity-analysis .add-product div {
+.right .activity-analysis .add-product .div {
     display: flex;
     align-items: center;
     gap: 0.6rem;
 }
 
-.right .activity-analysis .add-product div h3 {
+.right .activity-analysis .add-product .div h3 {
     font-weight: 600;
+}
+.right .add-product:hover{
+    background-color: #8970d63e;
+}
+
+.add-product-popUp{
+    display: none;
+}
+.add-product-popUp label{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.add-product-popUp input{
+    border: 1px solid #8970d6;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.add-product-popUp .popupSubmit{
+    background-color: #8a70d6;
+    color: white;
+    width: fit-content;
+    align-self: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.add-product-popUp .popupSubmit:hover{
+    background-color: #9b87d5;
+}
+.add-product-popUp.active{
+    position: absolute;
+    z-index: 1222;
+    top: 30%;
+    left: 30%;
+    background-color: #f7f6fc;
+    min-width: 30%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 1px 10px #6363633d;
+    border-radius: 25px;
+    flex-direction: column;
+    gap: 10px;
+    padding:50px 50px 30px;
+    
 }
 
 /* === media queries === */

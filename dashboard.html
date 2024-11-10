@@ -31,27 +31,27 @@
                     <span class="material-icons-sharp">grid_view</span>
                     <h3>Dashboard</h3>
                 </a>
-                <a href="#">
+                <!-- <a href="./activityTracking.html">
                     <span class="material-icons-sharp">calendar_today</span>
                     <h3>Activity Tracking</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">receipt_long</span>
+                </a> -->
+                <a href="./goalSetting.html">
+                    <span class="material-icons-sharp">flag</span>
                     <h3>Goal Setting</h3>
                 </a>
-                <a href="#">
+                <a href="./analytics.html">
                     <span class="material-icons-sharp">insights</span>
                     <h3>Analytics</h3>
                 </a>
                 <a href="./todo.html">
-                    <span class="material-icons-sharp">inventory</span>
+                    <span class="material-icons-sharp">checklist</span>
                     <h3>Todo</h3>
                 </a>
-                <a href="#">
-                    <span class="material-icons-sharp">report_gmailerrorred</span>
+                <a href="./reports.html">
+                    <span class="material-icons-sharp">bar_chart</span>
                     <h3>Reports</h3>
                 </a>
-                <a href="#">
+                <a href="./settings.html">
                     <span class="material-icons-sharp">settings</span>
                     <h3>Settings</h3>
                 </a>
@@ -63,6 +63,18 @@
         </aside>
 
         <main>
+            <form class="add-product-popUp">
+                <h1>Add Activity</h1><br>
+                <label>
+                    <h2>Title</h2>
+                    <input required id="title" type="text">
+                </label>
+                <label>
+                    <h2>Duration</h2>
+                    <input required id="duration" type="text">
+                </label>
+                <button type="submit" class="popupSubmit">Add</button>
+            </form>
             <h1>Dashboard</h1>
 
             <div class="date">
@@ -228,42 +240,49 @@
             <!-- Activity Analytics Section  -->
             <div class="activity-analysis">
                 <h2>Activity Analytics</h2>
-                <div class="item online">
-                    <div class="icon">
-                        <span class="material-icons-sharp">auto_stories</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>ONLINE LECTURES</h3>
-                            <small class="text-muted">Last 24 Hours</small>
+                <div class="activity-cont" id="activity-cont">
+                    
+                    <div class="item online">
+                        <div class="icon">
+                            <span class="material-icons-sharp">auto_stories</span>
                         </div>
-                        <h5 class="success">+35%</h5>
-                        <h3>3 hours</h3>
-                    </div>
-                </div>
-                <div class="item offline">
-                    <div class="icon">
-                        <span class="material-icons-sharp">book</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>SELF STUDY</h3>
-                            <small class="text-muted">Last 24 Hours</small>
+                        <div class="right">
+                            <div class="info">
+                                <h3>ONLINE LECTURES</h3>
+                                <small class="text-muted">Last 24 Hours</small>
+                            </div>
+                            <h5 class="success">+35%</h5>
+                            <h3>3 hours</h3>
                         </div>
-                        <h5 class="success">+20%</h5>
-                        <h3>2 hours</h3>
                     </div>
+
+                    <div class="item offline">
+                        <div class="icon">
+                            <span class="material-icons-sharp">book</span>
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <h3>SELF STUDY</h3>
+                                <small class="text-muted">Last 24 Hours</small>
+                            </div>
+                            <h5 class="success">+20%</h5>
+                            <h3>2 hours</h3>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="item add-product">
-                    <div>
+                    <div class="div">
                         <span class="material-icons-sharp">add</span>
                         <h3>Add Activity</h3>
                     </div>
                 </div>
             </div>
+            
+        </div>
 
-            <!-- Script -->
-            <script src="./contents/js/dashboard.js"></script>
+        <!-- Script -->
+        <script src="./contents/js/dashboard.js"></script>
 </body>
 
 </html>
